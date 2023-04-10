@@ -17,7 +17,12 @@ import {
 
 import * as SplashScreen from "expo-splash-screen";
 
+import { OnboardNavigator } from "../navigation/Onboard";
+import { useState } from "react";
+import { AuthNavigator } from "../navigation/AuthNav";
+
 export default function LoadApp() {
+  const [user, setUser] = useState(false);
   const [loaded, error] = useFonts({
     OpenSans_300Light,
     OpenSans_400Regular,
@@ -44,7 +49,7 @@ export default function LoadApp() {
       ref={navigationRef}
       onReady={async () => (loaded ? await SplashScreen.hideAsync() : {})}
     >
-      <AppNavigator />
+      {user ? <AppNavigator /> : <AuthNavigator />}
 
       <StatusBar barStyle={"dark-content"} backgroundColor="transparent" />
       <FlashMessage
@@ -56,14 +61,3 @@ export default function LoadApp() {
     </NavigationContainer>
   );
 }
-
-// import { View, Text } from 'react-native'
-// import React from 'react'
-
-// export default function LoadApp() {
-//   return (
-//     <View>
-//       <Text>LoadApp</Text>
-//     </View>
-//   )
-// }

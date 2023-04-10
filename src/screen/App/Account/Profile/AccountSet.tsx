@@ -1,10 +1,10 @@
 import { View, Text } from "react-native";
 import React from "react";
 
-export default function SettingsEntry() {
+export default function AccountSet() {
   return (
     <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-      <Text>SettingsEntry</Text>
+      <Text>AccountSet</Text>
     </View>
   );
 }

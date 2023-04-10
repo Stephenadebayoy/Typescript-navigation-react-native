@@ -6,7 +6,7 @@ import {
 
 import { AppRoute } from "../types";
 
-import { BankNavigator, TabNavigator } from "./Navigators";
+import { AccountNavigator, BankNavigator, TabNavigator } from "./Navigators";
 
 const { Navigator, Screen } = createStackNavigator<AppRoute>();
 
@@ -24,6 +24,13 @@ export default function AppNavigator(): JSX.Element {
         component={BankNavigator}
         options={{
           cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
+        }}
+      />
+      <Screen
+        name="AccountNavigator"
+        component={AccountNavigator}
+        options={{
+          cardStyleInterpolator: CardStyleInterpolators.forVerticalIOS,
         }}
       />
     </Navigator>

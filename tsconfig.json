@@ -32,10 +32,13 @@
       "@assets": ["./assets"],
       "@base": ["./base"],
       "@components": ["./components"],
-      "@constant": ["./constants"],
+      "@constant": ["./constant"],
       "@data": ["./data"],
       "@navigation": ["./navigation"],
       "@screen": ["./screen"],
+      "@service": ["./service"],
+      "@hooks": ["./hooks"],
+      "@store": ["./store"],
       "@utils": ["./utils"]
     }
   },

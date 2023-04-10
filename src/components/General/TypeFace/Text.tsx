@@ -3,7 +3,7 @@ import React from "react";
 
 import { Props, TextStyleProps, TextStyleType } from "./types";
 
-import { GColors, Layout } from "@constant";
+import { GColors, Layout } from "../../../constants";
 
 const { body, large, title, medium } = Layout.sizes;
 
